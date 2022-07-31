@@ -1,0 +1,259 @@
+// ANIMAÇÕES
+@keyframes animaNuvens {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(15em, 0, 0);
+    }
+}
+
+body {
+    background: rgb(247, 98, 136);
+    background: linear-gradient(45deg, rgba(247, 98, 136, 1) 0%, rgba(244, 151, 175, 1) 64%);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    position: relative;
+    text-align: center;
+
+    .nuvem {
+        position: absolute;
+        z-index: -1;
+        filter: drop-shadow(20px 10px 8px rgba(0, 0, 0, 0.24));
+
+        &.nuvem-1 {
+            animation: animaNuvens 20s ease-in-out alternate-reverse infinite;
+            top: 0;
+            left: 1em;
+            // background: red;
+            width: 250px;
+        }
+
+        &.nuvem-2 {
+            animation: animaNuvens 15s ease-in-out alternate-reverse infinite;
+            top: 100px;
+            right: 1em;
+            // background: rgb(1, 194, 97);
+            width: 350px;
+        }
+
+        &.nuvem-3 {
+            animation: animaNuvens 30s ease-in-out alternate-reverse infinite;
+            top: 300px;
+            left: 1em;
+            // background: rgb(55, 0, 255);
+            width: 280px;
+        }
+
+        &.nuvem-4 {
+            animation: animaNuvens 20s ease-in-out alternate-reverse infinite;
+            top: 550px;
+            right: 1em;
+            // background: rgb(255, 0, 200);
+            width: 200px;
+        }
+    }
+}
+
+#numeros {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.numero {
+    width: 80px;
+    height: 80px;
+    background: rgba(5, 231, 16, 0.418);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+
+    &:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.indisponivel {
+        background: rgba(228, 44, 44, 0.473);
+        cursor: default;
+        &:hover {
+            transform: none;
+        }
+    }
+
+    span {
+        font-size: 24px;
+    }
+}
+
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #81818173;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    #modal-area {
+        background: rgba(0, 0, 255, 0.37);
+    }
+}
+
+/* Config */
+$color-bg: #1e1e1e;
+$color-particle: #fff;
+$spacing: 2560px;
+$time-1: 120s;
+$time-2: 420s;
+$time-3: 480s;
+$time-4: 500s;
+
+/* mixins */
+@function particles($max) {
+    $val: 0px 0px $color-particle;
+    @for $i from 1 through $max {
+        $val: #{$val}, random($spacing) + px random($spacing) + px $color-particle;
+    }
+    @return $val;
+}
+
+@mixin particles($max) {
+    box-shadow: particles($max);
+    border-radius: 50%;
+}
+
+.page-bg {
+    background: $color-bg;
+    background-blend-mode: screen;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.particle,
+.particle:after {
+    background: transparent;
+}
+
+.particle:after {
+    position: absolute;
+    content: "";
+    top: $spacing;
+}
+
+.particle-1 {
+    animation: animParticle $time-1 linear infinite;
+    @include particles(1000);
+    height: 4px;
+    width: 4px;
+}
+
+.particle-1:after {
+    @include particles(900);
+    height: 2px;
+    width: 2px;
+}
+
+.particle-2 {
+    animation: animParticle $time-2 linear infinite;
+    @include particles(800);
+    height: 2px;
+    width: 2px;
+}
+
+.particle-2:after {
+    @include particles(500);
+    height: 3px;
+    width: 3px;
+}
+
+.particle-3:after {
+    @include particles(1100);
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+}
+
+.particle-4 {
+    animation: animParticle $time-4 linear infinite;
+    @include particles(1200);
+    height: 1px;
+    width: 1px;
+}
+
+.particle-4:after {
+    @include particles(700);
+    height: 1px;
+    width: 1px;
+}
+
+@keyframes animParticle {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY($spacing);
+    }
+}
+
+.page-wrapper {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+@-webkit-keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177,
+            0 0 150px #ff1177;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177,
+            0 0 75px #ff1177;
+    }
+}
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177,
+            0 0 150px #ff1177;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177,
+            0 0 75px #ff1177;
+    }
+}
+
+/*glow*/
+
+@keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177,
+            0 0 150px #ff1177;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177,
+            0 0 75px #ff1177;
+    }
+}

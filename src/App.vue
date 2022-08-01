@@ -1,28 +1,47 @@
 <template>
   <div id="container">
-    <div class="animation-wrapper">
-      <div class="particle particle-1"></div>
-      <div class="particle particle-2"></div>
-      <div class="particle particle-3"></div>
-    </div>
     <div id="modal" v-if="modalAtivo" @click="fecharModal($event)">
       <div id="modal-area">
         <h1>TEXTO DE EXPLICAÇÃO</h1>
+        <p>Colocar aqui o passo a passo para registrar o número.</p>
       </div>
     </div>
     <header>
+      <div id="header-imagem">
+        <img src="./assets/images/gatinha.png" alt="gatinha" />
+      </div>
+
+      <div id="estrelas">
+        <img src="./assets/images/estrela-1.png" alt="estrela" />
+        <img src="./assets/images/estrela-2.png" alt="estrela" />
+        <img src="./assets/images/estrela-3.png" alt="estrela" />
+        <img src="./assets/images/estrela-2.png" alt="estrela" />
+        <img src="./assets/images/estrela-3.png" alt="estrela" />
+      </div>
+
       <div id="header-abertura">
-        <h2>Texto aqui</h2>
-        <h1>Texto aqui</h1>
+        <h2>Chá Rifa da</h2>
+        <h1>Ana Alice</h1>
       </div>
 
       <div id="header-premio">
-        <h1>Texto cabeçalho</h1>
-        <h1>Descrição cabeçalho</h1>
+        <h2><span>Prêmio</span></h2>
+        <h1>R$ 200,00</h1>
       </div>
 
       <div id="header-exclicacao">
-        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui numquam voluptate, iste temporibus consequuntur repellendus obcaecati impedit praesentium tempora sunt nobis ipsum illo quisquam, voluptas earum animi aspernatur nulla natus. </span>
+        <h2><span> Como funciona?</span></h2>
+        <p>Cada número da rifa = 1 pacote de fraldas ou R$ 20,00</p>
+        <p>Basta escolher um número, e enviar mensagem para a mamãe (Mikaely) para avisar.</p>
+        <h2>
+          <a href="https://api.whatsapp.com/send?phone=+5575988108794&text=Ol%C3%A1,%20peguei%20seu%20n%C3%BAmero%20no%20site." target="_blank" rel="noopener noreferrer"> (75) 98810-8764</a>
+        </h2>
+      </div>
+
+      <div id="header-complemtos">
+        <h2><span> Data importantes</span></h2>
+        <p>Limite para pagamento / entrega da fralda: 00/00/0000</p>
+        <p>Data do sorteio: 00/00/0000</p>
       </div>
 
       <!-- Este bloque será desconsiderado no fluxo normal -->

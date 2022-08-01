@@ -1,3 +1,37 @@
+// FONTS
+@font-face {
+    font-family: CreamCake;
+    src: url(../fonts/cream_cake.otf);
+}
+
+@font-face {
+    font-family: HugMe;
+    src: url(../fonts/hug_me.otf);
+}
+
+//CORES
+$cor-primaria: rgb(247, 98, 136);
+$cor-secundaria: rgba(244, 151, 175, 1);
+$cor-terciaria: #bd2e52;
+
+//VARIÁVEIS DE TAMANHO
+$border-radius: 12px;
+
+//MIXIN
+@mixin tiulo {
+    color: $cor-terciaria;
+    user-select: none;
+    text-shadow: none;
+    background: #fff;
+    padding: 0.3em 1em;
+    border-radius: $border-radius;
+    border: 2px dashed $cor-secundaria;
+}
+
+@mixin font-family {
+    font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 // ANIMAÇÕES
 @keyframes animaNuvens {
     0% {
@@ -9,18 +43,167 @@
     }
 }
 
+@keyframes animaEstrela-1 {
+    0% {
+        transform: translate3d(0, -1em, 0);
+    }
+    100% {
+        transform: translate3d(0, -10em, 0);
+    }
+}
+
+@keyframes animaEstrela-2 {
+    0% {
+        transform: translate3d(0, -5em, 0);
+    }
+    100% {
+        transform: translate3d(0, -10em, 0);
+    }
+}
+
+@keyframes animaEstrela-3 {
+    0% {
+        transform: translate3d(0, -7em, 0);
+    }
+    100% {
+        transform: translate3d(0, -10em, 0);
+    }
+}
+
+@keyframes animaEstrela-mobile {
+    0% {
+        transform: translate3d(0, -450px, 0);
+    }
+    100% {
+        transform: translate3d(0, -400px, 0);
+    }
+}
+
+// SITE
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background: rgb(247, 98, 136);
-    background: linear-gradient(45deg, rgba(247, 98, 136, 1) 0%, rgba(244, 151, 175, 1) 64%);
+    background: $cor-primaria;
+    background: url(../images/background-superior.png), url(../images/background-inferior.png),
+        linear-gradient(45deg, $cor-primaria 0%, $cor-secundaria 64%);
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: top left, bottom right, bottom;
+}
+
+#container {
+    overflow: hidden;
+    padding: 5em 0;
 }
 
 header {
     position: relative;
     text-align: center;
+    width: 90%;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    p {
+        font-size: 1.2em;
+    }
+
+    #header-imagem {
+        // background: red;
+        filter: drop-shadow(20px 8px 8px rgba(0, 0, 0, 0.164));
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 9;
+        position: relative;
+    }
+
+    #estrelas {
+        // background: #bd2e5250;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        top: 0;
+        transform: translateY(-5em);
+        z-index: 1;
+
+        img {
+            width: 50px;
+
+            &:nth-child(1) {
+                animation: animaEstrela-1 15s ease-in-out alternate-reverse infinite;
+            }
+            &:nth-child(2) {
+                animation: animaEstrela-2 18s ease-in-out alternate-reverse infinite;
+            }
+            &:nth-child(3) {
+                animation: animaEstrela-3 12s ease-in-out alternate-reverse infinite;
+            }
+            &:nth-child(4) {
+                animation: animaEstrela-2 17s ease-in-out alternate-reverse infinite;
+            }
+            &:nth-child(5) {
+                animation: animaEstrela-1 21s ease-in-out alternate-reverse infinite;
+            }
+        }
+    }
+
+    #header-abertura,
+    #header-complemtos,
+    #header-premio,
+    #header-exclicacao {
+        margin: 4em 0;
+        @include font-family();
+        color: #fff;
+        text-shadow: 0px 0px 4px $cor-primaria, 4px 4px 4px rgba(0, 0, 0, 0.267);
+        z-index: 3;
+        position: relative;
+    }
+
+    #header-abertura {
+        h2 {
+            font-size: 36px;
+            margin: 0.2em 0;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin: 0.2em 0;
+        }
+    }
+
+    #header-complemtos,
+    #header-premio {
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            span {
+                @include tiulo();
+            }
+        }
+    }
+
+    #header-exclicacao {
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        h2 {
+            letter-spacing: 2px;
+
+            span {
+                @include tiulo();
+            }
+        }
+    }
 
     .nuvem {
         position: absolute;
@@ -30,7 +213,7 @@ header {
         &.nuvem-1 {
             animation: animaNuvens 20s ease-in-out alternate-reverse infinite;
             top: 0;
-            left: 1em;
+            left: 0;
             // background: red;
             width: 250px;
         }
@@ -45,7 +228,7 @@ header {
 
         &.nuvem-3 {
             animation: animaNuvens 30s ease-in-out alternate-reverse infinite;
-            top: 300px;
+            top: 400px;
             left: 1em;
             // background: rgb(55, 0, 255);
             width: 280px;
@@ -62,25 +245,33 @@ header {
 }
 
 #numeros {
-    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    justify-content: center;
+    width: 90%;
+    max-width: 1366px;
+    @include font-family();
 }
 
 .numero {
-    width: 80px;
-    height: 80px;
-    background: rgba(5, 231, 16, 0.418);
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 8px;
+    background: #fff;
+    border-radius: $border-radius;
+    border: 2px dashed $cor-secundaria;
     box-sizing: border-box;
-    border-radius: 10px;
+    color: $cor-terciaria;
     cursor: pointer;
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    margin: 12px;
+    padding: 0.3em 1em;
+    text-shadow: none;
     transition: all 0.3s ease-in-out;
     user-select: none;
+    width: 80px;
+    box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
 
     &:hover {
         transform: scale(1.2);
@@ -111,149 +302,40 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 10;
+    text-align: center;
 
     #modal-area {
-        background: rgba(0, 0, 255, 0.37);
+        width: 80%;
+        background: $cor-secundaria;
+        border: 2px dashed $cor-primaria;
+        padding: 0.2em 1em;
+        @include font-family();
+        border-radius: $border-radius;
     }
 }
 
-/* Config */
-$color-bg: #1e1e1e;
-$color-particle: #fff;
-$spacing: 2560px;
-$time-1: 120s;
-$time-2: 420s;
-$time-3: 480s;
-$time-4: 500s;
-
-/* mixins */
-@function particles($max) {
-    $val: 0px 0px $color-particle;
-    @for $i from 1 through $max {
-        $val: #{$val}, random($spacing) + px random($spacing) + px $color-particle;
-    }
-    @return $val;
-}
-
-@mixin particles($max) {
-    box-shadow: particles($max);
-    border-radius: 50%;
-}
-
-.page-bg {
-    background: $color-bg;
-    background-blend-mode: screen;
-    background-size: cover;
-    filter: grayscale(100%);
-    z-index: -1;
-}
-
-.particle,
-.particle:after {
-    background: transparent;
-}
-
-.particle:after {
-    position: absolute;
-    content: "";
-    top: $spacing;
-}
-
-.particle-1 {
-    animation: animParticle $time-1 linear infinite;
-    @include particles(1000);
-    height: 4px;
-    width: 4px;
-}
-
-.particle-1:after {
-    @include particles(900);
-    height: 2px;
-    width: 2px;
-}
-
-.particle-2 {
-    animation: animParticle $time-2 linear infinite;
-    @include particles(800);
-    height: 2px;
-    width: 2px;
-}
-
-.particle-2:after {
-    @include particles(500);
-    height: 3px;
-    width: 3px;
-}
-
-.particle-3:after {
-    @include particles(1100);
-    height: 3px;
-    width: 3px;
-    border-radius: 50%;
-}
-
-.particle-4 {
-    animation: animParticle $time-4 linear infinite;
-    @include particles(1200);
-    height: 1px;
-    width: 1px;
-}
-
-.particle-4:after {
-    @include particles(700);
-    height: 1px;
-    width: 1px;
-}
-
-@keyframes animParticle {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY($spacing);
-    }
-}
-
-.page-wrapper {
-    text-align: center;
-    color: #fff;
-    z-index: 2;
-}
-
-@-webkit-keyframes neon1 {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177,
-            0 0 150px #ff1177;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177,
-            0 0 75px #ff1177;
-    }
-}
-
-/*glow for mozilla*/
-
-@-moz-keyframes neon1 {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177,
-            0 0 150px #ff1177;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177,
-            0 0 75px #ff1177;
-    }
-}
-
-/*glow*/
-
-@keyframes neon1 {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177,
-            0 0 150px #ff1177;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177,
-            0 0 75px #ff1177;
+@media (max-width: 700px) {
+    header {
+        #estrelas {
+            z-index: 15;
+            img {
+                &:nth-child(1) {
+                    animation: animaEstrela-1 15s ease-in-out alternate-reverse infinite;
+                }
+                &:nth-child(2) {
+                    animation: animaEstrela-mobile 18s ease-in-out alternate-reverse infinite;
+                }
+                &:nth-child(3) {
+                    animation: animaEstrela-mobile 12s ease-in-out alternate-reverse infinite;
+                }
+                &:nth-child(4) {
+                    animation: animaEstrela-mobile 17s ease-in-out alternate-reverse infinite;
+                }
+                &:nth-child(5) {
+                    animation: animaEstrela-1 21s ease-in-out alternate-reverse infinite;
+                }
+            }
+        }
     }
 }

@@ -2,8 +2,12 @@
   <div id="container">
     <div id="modal" v-if="modalAtivo" @click="fecharModal($event)">
       <div id="modal-area">
-        <h1>TEXTO DE EXPLICAÇÃO</h1>
-        <p>Colocar aqui o passo a passo para registrar o número.</p>
+        <span class="fechar" @click="modalAtivo = false">x</span>
+        <h1>
+          Você escolheu o número <u>{{ numeroEscolhido }}</u>
+        </h1>
+        <p>{{ textoAjuda }}</p>
+        <h1>{{ textoAjudaComplemetar }}</h1>
       </div>
     </div>
     <header>
@@ -26,22 +30,23 @@
 
       <div id="header-premio">
         <h2><span>Prêmio</span></h2>
-        <h1>R$ 200,00</h1>
+        <h1>R$ 100,00</h1>
       </div>
 
       <div id="header-exclicacao">
         <h2><span> Como funciona?</span></h2>
-        <p>Cada número da rifa = 1 pacote de fraldas ou R$ 20,00</p>
-        <p>Basta escolher um número, e enviar mensagem para a mamãe (Mikaely) para avisar.</p>
+        <p>Cada número da rifa = <u>1 pacote de fraldas</u> ou <u>R$ 10,00</u></p>
+        <p>Basta clicar no número desejado e enviar uma mensagem para a mamãe (Mikaely) avisando.</p>
         <h2>
-          <a href="https://api.whatsapp.com/send?phone=+5575988108794&text=Ol%C3%A1,%20peguei%20seu%20n%C3%BAmero%20no%20site." target="_blank" rel="noopener noreferrer"> (75) 98810-8764</a>
+          <a href="https://api.whatsapp.com/send?phone=+5575988108764&text=Oi,%20escolhi%20um%20numero%20da%20rifa." target="_blank" rel="noopener noreferrer"> (75) 98810-8764</a>
         </h2>
       </div>
 
       <div id="header-complemtos">
-        <h2><span> Data importantes</span></h2>
-        <p>Limite para pagamento / entrega da fralda: 00/00/0000</p>
-        <p>Data do sorteio: 00/00/0000</p>
+        <h2><span> Datas importantes</span></h2>
+        <p>Limite para pagamento / entrega das fraldas: <u>03/10/2022</u></p>
+        <p>Data do sorteio: <u>08/10/2022</u> às <u>19:00h</u></p>
+        <p>O número vencedor será divulgado neste mesmo link</p>
       </div>
 
       <!-- Este bloque será desconsiderado no fluxo normal -->
@@ -52,9 +57,20 @@
     </header>
 
     <main>
+      <div id="explicacao">
+        <div id="item1">
+          <div></div>
+          <span>Números disponíveis</span>
+        </div>
+
+        <div id="item2">
+          <div></div>
+          <span>Números indisponíveis</span>
+        </div>
+      </div>
       <section id="numeros">
-        <div class="numero" :class="item.disponivel ? 'disponivel' : 'indisponivel'" v-for="(item, index) in listaBilhetes" :key="index">
-          <span @click="modalAtivo = true">
+        <div class="numero" :class="item.disponivel ? 'disponivel' : 'indisponivel'" v-for="(item, index) in listaBilhetes" :key="index" @click="ativarModal(item.numero, item.disponivel)">
+          <span>
             {{ item.numero }}
           </span>
         </div>
@@ -71,9 +87,23 @@ export default {
     return {
       modalAtivo: false,
       listaBilhetes: data,
+      textoAjuda: '',
+      textoAjudaComplemetar: '',
+      numeroEscolhido: '',
     };
   },
   methods: {
+    ativarModal(numero, disponivel) {
+      if (disponivel) {
+        this.textoAjuda = 'Agora basta enviar uma mensagem para a mamãe (Mikaely) pedindo para reservarmos esse número.';
+        this.textoAjudaComplemetar = '(75) 98810-8764.';
+      } else {
+        this.textoAjuda = 'Desculpe! Esse número já foi escolhido, tente outro.';
+        this.textoAjudaComplemetar = '😘';
+      }
+      this.numeroEscolhido = numero;
+      this.modalAtivo = true;
+    },
     fecharModal(e) {
       if (e.target.id === 'modal') {
         this.modalAtivo = false;

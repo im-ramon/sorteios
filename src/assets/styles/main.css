@@ -27,7 +27,7 @@
     transform: translate3d(0, -1em, 0);
   }
   100% {
-    transform: translate3d(0, -10em, 0);
+    transform: translate3d(0, -20em, 0);
   }
 }
 @keyframes animaEstrela-1 {
@@ -35,7 +35,7 @@
     transform: translate3d(0, -1em, 0);
   }
   100% {
-    transform: translate3d(0, -10em, 0);
+    transform: translate3d(0, -20em, 0);
   }
 }
 @-webkit-keyframes animaEstrela-2 {
@@ -43,7 +43,7 @@
     transform: translate3d(0, -5em, 0);
   }
   100% {
-    transform: translate3d(0, -10em, 0);
+    transform: translate3d(0, -15em, 0);
   }
 }
 @keyframes animaEstrela-2 {
@@ -51,7 +51,7 @@
     transform: translate3d(0, -5em, 0);
   }
   100% {
-    transform: translate3d(0, -10em, 0);
+    transform: translate3d(0, -15em, 0);
   }
 }
 @-webkit-keyframes animaEstrela-3 {
@@ -59,7 +59,7 @@
     transform: translate3d(0, -7em, 0);
   }
   100% {
-    transform: translate3d(0, -10em, 0);
+    transform: translate3d(0, -15em, 0);
   }
 }
 @keyframes animaEstrela-3 {
@@ -67,7 +67,7 @@
     transform: translate3d(0, -7em, 0);
   }
   100% {
-    transform: translate3d(0, -10em, 0);
+    transform: translate3d(0, -15em, 0);
   }
 }
 @-webkit-keyframes animaEstrela-mobile {
@@ -84,6 +84,22 @@
   }
   100% {
     transform: translate3d(0, -400px, 0);
+  }
+}
+@-webkit-keyframes animaEstrela-mobile2 {
+  0% {
+    transform: translate3d(0, -14em, 0);
+  }
+  100% {
+    transform: translate3d(0, -20em, 0);
+  }
+}
+@keyframes animaEstrela-mobile2 {
+  0% {
+    transform: translate3d(0, -14em, 0);
+  }
+  100% {
+    transform: translate3d(0, -20em, 0);
   }
 }
 html {
@@ -136,19 +152,19 @@ header #estrelas img {
   width: 50px;
 }
 header #estrelas img:nth-child(1) {
-  animation: animaEstrela-1 15s ease-in-out alternate-reverse infinite;
+  animation: animaEstrela-1 10s ease-in-out alternate-reverse infinite;
 }
 header #estrelas img:nth-child(2) {
-  animation: animaEstrela-2 18s ease-in-out alternate-reverse infinite;
+  animation: animaEstrela-2 6s ease-in-out alternate-reverse infinite;
 }
 header #estrelas img:nth-child(3) {
-  animation: animaEstrela-3 12s ease-in-out alternate-reverse infinite;
+  animation: animaEstrela-3 8s ease-in-out alternate-reverse infinite;
 }
 header #estrelas img:nth-child(4) {
-  animation: animaEstrela-2 17s ease-in-out alternate-reverse infinite;
+  animation: animaEstrela-2 7s ease-in-out alternate-reverse infinite;
 }
 header #estrelas img:nth-child(5) {
-  animation: animaEstrela-1 21s ease-in-out alternate-reverse infinite;
+  animation: animaEstrela-1 8s ease-in-out alternate-reverse infinite;
 }
 header #header-abertura,
 header #header-complemtos,
@@ -236,6 +252,49 @@ header .nuvem.nuvem-4 {
   width: 200px;
 }
 
+#explicacao {
+  width: 80%;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#explicacao #item1,
+#explicacao #item2 {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  margin: 0.5em 0;
+}
+#explicacao #item1 div {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px dashed rgb(244, 151, 175);
+  box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
+}
+#explicacao #item2 div {
+  width: 35px;
+  height: 35px;
+  background: rgba(228, 44, 44, 0.473);
+  border-radius: 12px;
+  border: 2px dashed rgb(244, 151, 175);
+  box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
+}
+#explicacao span {
+  padding-left: 1em;
+  color: #fff;
+  text-shadow: 0px 0px 4px rgb(247, 98, 136), 4px 4px 4px rgba(0, 0, 0, 0.267);
+}
+
 #numeros {
   margin: 0 auto;
   display: flex;
@@ -295,10 +354,13 @@ header .nuvem.nuvem-4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 150;
   text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 4px rgb(247, 98, 136), 4px 4px 4px rgba(0, 0, 0, 0.267);
 }
 #modal #modal-area {
+  position: relative;
   width: 80%;
   background: rgb(244, 151, 175);
   border: 2px dashed rgb(247, 98, 136);
@@ -306,24 +368,56 @@ header .nuvem.nuvem-4 {
   font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   border-radius: 12px;
 }
+#modal #modal-area .fechar {
+  position: absolute;
+  right: -18px;
+  background: rgb(255, 131, 131);
+  border: 2px solid rgba(0, 0, 0, 0.1215686275);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -18px;
+}
 
 @media (max-width: 700px) {
   header #estrelas {
     z-index: 15;
   }
   header #estrelas img:nth-child(1) {
-    animation: animaEstrela-1 15s ease-in-out alternate-reverse infinite;
+    animation: animaEstrela-mobile2 8s ease-in-out alternate-reverse infinite;
   }
   header #estrelas img:nth-child(2) {
-    animation: animaEstrela-mobile 18s ease-in-out alternate-reverse infinite;
-  }
-  header #estrelas img:nth-child(3) {
     animation: animaEstrela-mobile 12s ease-in-out alternate-reverse infinite;
   }
+  header #estrelas img:nth-child(3) {
+    animation: animaEstrela-mobile 7s ease-in-out alternate-reverse infinite;
+  }
   header #estrelas img:nth-child(4) {
-    animation: animaEstrela-mobile 17s ease-in-out alternate-reverse infinite;
+    animation: animaEstrela-mobile 8s ease-in-out alternate-reverse infinite;
   }
   header #estrelas img:nth-child(5) {
-    animation: animaEstrela-1 21s ease-in-out alternate-reverse infinite;
+    animation: animaEstrela-mobile2 10s ease-in-out alternate-reverse infinite;
   }
+}
+footer {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgb(247, 98, 136);
+  border-top: 2px solid rgba(0, 0, 0, 0.11);
+  padding: 4px 0;
+  color: #fff;
+  text-shadow: 0px 0px 4px rgb(247, 98, 136), 4px 4px 4px rgba(0, 0, 0, 0.267);
+}
+footer a {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

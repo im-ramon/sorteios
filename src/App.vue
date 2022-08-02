@@ -69,7 +69,7 @@
         </div>
       </div>
       <section id="numeros">
-        <div class="numero" :class="item.disponivel ? 'disponivel' : 'indisponivel'" v-for="(item, index) in listaBilhetes" :key="index" @click="ativarModal(item.numero, item.disponivel)">
+        <div class="numero" :class="item.disponivel ? 'disponivel' : 'indisponivel'" v-for="(item, index) in listaBilhetes" :key="index" @click="ativarModal(item.numero, item.disponivel, item.nome)">
           <span>
             {{ item.numero }}
           </span>
@@ -93,12 +93,12 @@ export default {
     };
   },
   methods: {
-    ativarModal(numero, disponivel) {
+    ativarModal(numero, disponivel, nome) {
       if (disponivel) {
         this.textoAjuda = 'Agora basta enviar uma mensagem para a mamãe (Mikaely) pedindo para reservarmos esse número.';
         this.textoAjudaComplemetar = '(75) 98810-8764.';
       } else {
-        this.textoAjuda = 'Desculpe! Esse número já foi escolhido, tente outro.';
+        this.textoAjuda = `Desculpe! Esse número já foi escolhido por "${nome}", tente outro.`;
         this.textoAjudaComplemetar = '😘';
       }
       this.numeroEscolhido = numero;

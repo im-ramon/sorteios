@@ -6,6 +6,38 @@
   font-family: HugMe;
   src: url(../fonts/hug_me.otf);
 }
+@-webkit-keyframes seta1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1em, 0, 0);
+  }
+}
+@keyframes seta1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1em, 0, 0);
+  }
+}
+@-webkit-keyframes seta2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1em, 0, 0);
+  }
+}
+@keyframes seta2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1em, 0, 0);
+  }
+}
 @-webkit-keyframes animaNuvens {
   0% {
     transform: translate3d(0, 0, 0);
@@ -386,6 +418,10 @@ header .nuvem.nuvem-4 {
   align-items: center;
   top: -18px;
 }
+#modal .textoAjudaComplemetar a {
+  color: #fff;
+  text-decoration: none;
+}
 
 @media (max-width: 700px) {
   header #estrelas {
@@ -420,4 +456,14 @@ footer {
 }
 footer a {
   color: #fff;
+}
+
+.seta1 {
+  display: inline-block;
+  animation: seta1 1s ease-out 1.4s infinite alternate-reverse;
+}
+
+.seta2 {
+  display: inline-block;
+  animation: seta2 1s ease-out infinite alternate-reverse;
 }/*# sourceMappingURL=main.css.map */

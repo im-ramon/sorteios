@@ -33,6 +33,24 @@ $border-radius: 12px;
 }
 
 // ANIMAÇÕES
+@keyframes seta1 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1em, 0, 0);
+    }
+}
+
+@keyframes seta2 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(1em, 0, 0);
+    }
+}
+
 @keyframes animaNuvens {
     0% {
         transform: translate3d(0, 0, 0);
@@ -390,6 +408,13 @@ header {
             top: -18px;
         }
     }
+
+    .textoAjudaComplemetar {
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -431,4 +456,14 @@ footer {
     a {
         color: #fff;
     }
+}
+
+.seta1 {
+    display: inline-block;
+    animation: seta1 1s ease-out 1.4s infinite alternate-reverse;
+}
+
+.seta2 {
+    display: inline-block;
+    animation: seta2 1s ease-out infinite alternate-reverse;
 }

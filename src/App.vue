@@ -7,7 +7,8 @@
           Você escolheu o número <u>{{ numeroEscolhido }}</u>
         </h1>
         <p>{{ textoAjuda }}</p>
-        <h1>{{ textoAjudaComplemetar }}</h1>
+        <p v-if="textoAjudaComplemetar !== '😘'"><br /><br />Clique no número para enviar uma mensagem. Este também é o Pix</p>
+        <h1 class="textoAjudaComplemetar" v-html="textoAjudaComplemetar"></h1>
       </div>
     </div>
     <header>
@@ -24,28 +25,28 @@
       </div>
 
       <div id="header-abertura">
-        <h2>Chá Rifa da</h2>
+        <h2>Fraldas da</h2>
         <h1>Ana Alice</h1>
       </div>
 
       <div id="header-premio">
-        <h2><span>Prêmio</span></h2>
+        <h2><span>Brinde sorteado</span></h2>
         <h1>R$ 100,00</h1>
       </div>
 
       <div id="header-exclicacao">
         <h2><span> Como funciona?</span></h2>
-        <p>Cada número da rifa = <u>1 pacote de fraldas</u> ou <u>R$ 10,00</u></p>
+        <p>Cada número escolhido = <u>1 pacote de fraldas</u> ou <u>R$ 10,00</u></p>
         <p>Basta clicar no número desejado e enviar uma mensagem para a mamãe (Mikaely) avisando.</p>
         <h2>
-          <a href="https://api.whatsapp.com/send?phone=+5575988108764&text=Oi,%20escolhi%20um%20numero%20da%20rifa." target="_blank" rel="noopener noreferrer"> (75) 98810-8764</a>
+          <a href="https://api.whatsapp.com/send?phone=+5575988108764&text=Oi,%20escolhi%20um%20numero%20da%20do%20cha." target="_blank" rel="noopener noreferrer"> (75) 98810-8764</a>
         </h2>
       </div>
 
       <div id="header-complemtos">
         <h2><span> Datas importantes</span></h2>
-        <p>Limite para pagamento / entrega das fraldas: <u>03/10/2022</u></p>
-        <p>Data do sorteio: <u>08/10/2022</u> às <u>19:00h</u></p>
+        <p>Limite para pagamento ou entrega das fraldas: <u>03/10/2022</u></p>
+        <p>Data do sorteio: <u>08/10/2022</u></p>
         <p>O número vencedor será divulgado neste mesmo link</p>
       </div>
 
@@ -96,7 +97,7 @@ export default {
     ativarModal(numero, disponivel, nome) {
       if (disponivel) {
         this.textoAjuda = 'Agora basta enviar uma mensagem para a mamãe (Mikaely) pedindo para reservarmos esse número.';
-        this.textoAjudaComplemetar = '(75) 98810-8764.';
+        this.textoAjudaComplemetar = '<a href="https://api.whatsapp.com/send?phone=+5575988108764&text=Oi,%20escolhi%20um%20numero%20da%20do%20cha." target="_blank" rel="noopener noreferrer"> <span class="seta1">&#62;</span> (75) 98810-8764 <span class="seta2">&#60;</span> </a>';
       } else {
         this.textoAjuda = `Desculpe! Esse número já foi escolhido por "${nome}", tente outro.`;
         this.textoAjudaComplemetar = '😘';

@@ -39,7 +39,7 @@ export default
         { numero: '37', nome: '-', pago: '75999639226', disponivel: 1 },
         { numero: '38', nome: '-', pago: '75999639227', disponivel: 1 },
         { numero: '39', nome: 'Maíra', pago: 'não', disponivel: 0 }, //Tia
-        { numero: '40', nome: '-', pago: '75999639229', disponivel: 1 },
+        { numero: '40', nome: 'Cristiane', pago: 'não', disponivel: 0 },
         { numero: '41', nome: '-', pago: '75999639230', disponivel: 1 },
         { numero: '42', nome: '-', pago: '75999639231', disponivel: 1 },
         { numero: '43', nome: '-', pago: '75999639232', disponivel: 1 },

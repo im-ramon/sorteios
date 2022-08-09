@@ -26,7 +26,7 @@ export default
         { numero: '24', nome: '-', pago: '75999639213', disponivel: 1 },
         { numero: '25', nome: 'Iracema', pago: 'não', disponivel: 0 },
         { numero: '26', nome: 'Poly', pago: 'não', disponivel: 0 },
-        { numero: '27', nome: '-', pago: '75999639216', disponivel: 1 },
+        { numero: '27', nome: 'Aécio', pago: 'não', disponivel: 0 },
         { numero: '28', nome: 'Larissa', pago: 'não', disponivel: 0 }, // Prima
         { numero: '29', nome: '-', pago: '75999639218', disponivel: 1 },
         { numero: '30', nome: 'Elisa', pago: 'não', disponivel: 0 },

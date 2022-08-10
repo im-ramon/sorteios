@@ -8,7 +8,7 @@ export default
         { numero: '06', nome: '-', pago: '75999639195', disponivel: 1 },
         { numero: '07', nome: 'Gardênia', pago: 'não', disponivel: 0 },
         { numero: '08', nome: 'Naiane', pago: 'não', disponivel: 0 }, // Facul
-        { numero: '09', nome: '-', pago: '75999639198', disponivel: 1 },
+        { numero: '09', nome: 'Adriana - Jana', pago: 'não', disponivel: 0 },
         { numero: '10', nome: 'Janio', pago: 'não', disponivel: 0 },
         { numero: '11', nome: 'Ilda', pago: 'não', disponivel: 0 }, // Irmã
         { numero: '12', nome: '-', pago: '75999639201', disponivel: 1 },
@@ -43,7 +43,7 @@ export default
         { numero: '41', nome: '-', pago: '75999639230', disponivel: 1 },
         { numero: '42', nome: '-', pago: '75999639231', disponivel: 1 },
         { numero: '43', nome: '-', pago: '75999639232', disponivel: 1 },
-        { numero: '44', nome: '-', pago: '75999639233', disponivel: 1 },
+        { numero: '44', nome: 'Janair', pago: 'não', disponivel: 0 },
         { numero: '45', nome: 'Pedro', pago: 'não', disponivel: 0 },
         { numero: '46', nome: 'Maíra', pago: 'não', disponivel: 0 },
         { numero: '47', nome: 'Marcos', pago: 'não', disponivel: 0 },
@@ -88,7 +88,7 @@ export default
         { numero: '86', nome: 'Romário', pago: 'não', disponivel: 0 },
         { numero: '87', nome: '-', pago: '75999639276', disponivel: 1 },
         { numero: '88', nome: 'Geovana', pago: 'não', disponivel: 0 },
-        { numero: '89', nome: '-', pago: '75999639278', disponivel: 1 },
+        { numero: '89', nome: 'Adriana - Jana', pago: 'não', disponivel: 0 },
         { numero: '90', nome: '-', pago: '75999639279', disponivel: 1 },
         { numero: '91', nome: '-', pago: '75999639280', disponivel: 1 },
         { numero: '92', nome: '-', pago: '75999639281', disponivel: 1 },
@@ -97,7 +97,7 @@ export default
         { numero: '95', nome: '-', pago: '75999639284', disponivel: 1 },
         { numero: '96', nome: '-', pago: '75999639285', disponivel: 1 },
         { numero: '97', nome: 'Elves', pago: 'não', disponivel: 0 },
-        { numero: '98', nome: '-', pago: '75999639287', disponivel: 1 },
+        { numero: '98', nome: 'Janair', pago: 'não', disponivel: 0 },
         { numero: '99', nome: 'Elves', pago: 'não', disponivel: 0 },
         { numero: '00', nome: 'Railton', pago: 'não', disponivel: 0 },
 

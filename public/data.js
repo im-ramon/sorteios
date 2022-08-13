@@ -2,10 +2,10 @@ export default
     [
         { numero: '01', nome: 'Thainá', pago: 'não', disponivel: 0 },
         { numero: '02', nome: 'Sueli', pago: 'não', disponivel: 0 },
-        { numero: '03', nome: '-', pago: '75999639192', disponivel: 1 },
+        { numero: '03', nome: 'Roque', pago: 'não', disponivel: 0 },
         { numero: '04', nome: 'Pedro', pago: 'não', disponivel: 0 },
         { numero: '05', nome: 'Dany', pago: 'sim', disponivel: 0 }, // Irmã 
-        { numero: '06', nome: '-', pago: '75999639195', disponivel: 1 },
+        { numero: '06', nome: 'Roque', pago: 'não', disponivel: 0 },
         { numero: '07', nome: 'Gardênia', pago: 'não', disponivel: 0 },
         { numero: '08', nome: 'Naiane', pago: 'não', disponivel: 0 }, // Facul
         { numero: '09', nome: 'Adriana - Jana', pago: 'não', disponivel: 0 },
@@ -15,8 +15,8 @@ export default
         { numero: '13', nome: 'Thainá', pago: 'não', disponivel: 0 },
         { numero: '14', nome: 'Vitor', pago: 'não', disponivel: 0 },
         { numero: '15', nome: 'Railton', pago: 'não', disponivel: 0 },
-        { numero: '16', nome: '-', pago: '75999639205', disponivel: 1 },
-        { numero: '17', nome: '-', pago: '75999639206', disponivel: 1 },
+        { numero: '16', nome: 'Maria de Fátima', pago: 'não', disponivel: 0 },
+        { numero: '17', nome: 'Maria de Fátima', pago: 'não', disponivel: 0 },
         { numero: '18', nome: '-', pago: '75999639207', disponivel: 1 },
         { numero: '19', nome: 'Telma', pago: 'não', disponivel: 0 }, //Tia
         { numero: '20', nome: 'Thainá', pago: 'não', disponivel: 0 },
@@ -37,7 +37,7 @@ export default
         { numero: '35', nome: 'Crislane', pago: 'não', disponivel: 0 },
         { numero: '36', nome: 'Dany', pago: 'sim', disponivel: 0 }, // Irmã 
         { numero: '37', nome: '-', pago: '75999639226', disponivel: 1 },
-        { numero: '38', nome: '-', pago: '75999639227', disponivel: 1 },
+        { numero: '38', nome: 'Fátima', pago: 'não', disponivel: 0 },
         { numero: '39', nome: 'Maíra', pago: 'não', disponivel: 0 }, //Tia
         { numero: '40', nome: 'Cristiane', pago: 'não', disponivel: 0 },
         { numero: '41', nome: '-', pago: '75999639230', disponivel: 1 },
@@ -66,7 +66,7 @@ export default
         { numero: '64', nome: 'Maurício', pago: 'não', disponivel: 0 },
         { numero: '65', nome: 'Nego', pago: 'não', disponivel: 0 },
         { numero: '66', nome: '-', pago: '75999639255', disponivel: 1 },
-        { numero: '67', nome: '-', pago: '75999639256', disponivel: 1 },
+        { numero: '67', nome: 'Leide', pago: 'não', disponivel: 0 },
         { numero: '68', nome: '-', pago: '75999639257', disponivel: 1 },
         { numero: '69', nome: '-', pago: '75999639258', disponivel: 1 },
         { numero: '70', nome: '-', pago: '75999639259', disponivel: 1 },
@@ -80,7 +80,7 @@ export default
         { numero: '78', nome: 'Pedro', pago: 'não', disponivel: 0 },
         { numero: '79', nome: '-', pago: '75999639268', disponivel: 1 },
         { numero: '80', nome: '-', pago: '75999639269', disponivel: 1 },
-        { numero: '81', nome: '-', pago: '75999639270', disponivel: 1 },
+        { numero: '81', nome: 'Tanildes', pago: 'não', disponivel: 0 },
         { numero: '82', nome: '-', pago: '75999639271', disponivel: 1 },
         { numero: '83', nome: '-', pago: '75999639272', disponivel: 1 },
         { numero: '84', nome: '-', pago: '75999639273', disponivel: 1 },

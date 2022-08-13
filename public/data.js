@@ -12,7 +12,7 @@ export default
         { numero: '10', nome: 'Janio', pago: 'não', disponivel: 0 },
         { numero: '11', nome: 'Ilda', pago: 'não', disponivel: 0 }, // Irmã
         { numero: '12', nome: 'Bela', pago: 'não', disponivel: 0 },
-        { numero: '13', nome: 'Thainá', pago: 'não', disponivel: 0 },
+        { numero: '13', nome: 'Roberta', pago: 'não', disponivel: 0 },
         { numero: '14', nome: 'Vitor', pago: 'não', disponivel: 0 },
         { numero: '15', nome: 'Railton', pago: 'não', disponivel: 0 },
         { numero: '16', nome: 'Maria de Fátima', pago: 'não', disponivel: 0 },
@@ -47,7 +47,7 @@ export default
         { numero: '45', nome: 'Pedro', pago: 'não', disponivel: 0 },
         { numero: '46', nome: 'Maíra', pago: 'não', disponivel: 0 },
         { numero: '47', nome: 'Marcos', pago: 'não', disponivel: 0 },
-        { numero: '48', nome: '-', pago: '75999639237', disponivel: 1 },
+        { numero: '48', nome: 'Thainá', pago: 'não', disponivel: 0 },
         { numero: '49', nome: 'Eurico', pago: 'não', disponivel: 0 },
         { numero: '50', nome: 'Lidi', pago: 'não', disponivel: 0 },
         { numero: '51', nome: 'Maiara', pago: 'não', disponivel: 0 },

@@ -36,7 +36,7 @@ export default
         { numero: '34', nome: 'Ricardo', pago: 'não', disponivel: 0 },
         { numero: '35', nome: 'Crislane', pago: 'não', disponivel: 0 },
         { numero: '36', nome: 'Dany', pago: 'sim', disponivel: 0 }, // Irmã 
-        { numero: '37', nome: '-', pago: '75999639226', disponivel: 1 },
+        { numero: '37', nome: 'Jefferson Moreira', pago: 'não', disponivel: 0 },
         { numero: '38', nome: 'Fátima', pago: 'não', disponivel: 0 },
         { numero: '39', nome: 'Maíra', pago: 'não', disponivel: 0 }, //Tia
         { numero: '40', nome: 'Cristiane', pago: 'não', disponivel: 0 },
@@ -90,7 +90,7 @@ export default
         { numero: '88', nome: 'Geovana', pago: 'não', disponivel: 0 },
         { numero: '89', nome: 'Adriana - Jana', pago: 'não', disponivel: 0 },
         { numero: '90', nome: 'Paulo', pago: 'não', disponivel: 0 },
-        { numero: '91', nome: '-', pago: '75999639280', disponivel: 1 },
+        { numero: '91', nome: 'Jefferson Moreira', pago: 'não', disponivel: 0 },
         { numero: '92', nome: '-', pago: '75999639281', disponivel: 1 },
         { numero: '93', nome: 'Crislane', pago: 'não', disponivel: 0 },
         { numero: '94', nome: '-', pago: '75999639283', disponivel: 1 },

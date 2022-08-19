@@ -17,7 +17,7 @@ export default
         { numero: '15', nome: 'Railton', pago: 'não', disponivel: 0 },
         { numero: '16', nome: 'Maria de Fátima', pago: 'não', disponivel: 0 },
         { numero: '17', nome: 'Maria de Fátima', pago: 'não', disponivel: 0 },
-        { numero: '18', nome: '-', pago: '75999639207', disponivel: 1 },
+        { numero: '18', nome: 'Antônio', pago: 'não', disponivel: 0 }, // EB
         { numero: '19', nome: 'Telma', pago: 'não', disponivel: 0 }, //Tia
         { numero: '20', nome: 'Thainá', pago: 'não', disponivel: 0 },
         { numero: '21', nome: 'Naiane', pago: 'não', disponivel: 0 }, // Facul

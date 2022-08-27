@@ -53,7 +53,7 @@ export default
         { numero: '51', nome: 'Maiara', pago: 'não', disponivel: 0 },
         { numero: '52', nome: 'Sandrinha', pago: 'não', disponivel: 0 },
         { numero: '53', nome: 'Pedro M', pago: 'não', disponivel: 0 },
-        { numero: '54', nome: '-', pago: '75999639243', disponivel: 1 },
+        { numero: '54', nome: 'Luiz', pago: 'não', disponivel: 0 },
         { numero: '55', nome: '-', pago: '75999639244', disponivel: 1 },
         { numero: '56', nome: 'Adriana', pago: 'não', disponivel: 0 },
         { numero: '57', nome: 'Bira', pago: 'não', disponivel: 0 },

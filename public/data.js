@@ -62,7 +62,7 @@ export default
         { numero: '60', nome: 'Maurício', pago: 'não', disponivel: 0 },
         { numero: '61', nome: 'Maurício', pago: 'não', disponivel: 0 },
         { numero: '62', nome: 'Catiane', pago: 'não', disponivel: 0 },
-        { numero: '63', nome: '-', pago: '75999639252', disponivel: 1 },
+        { numero: '63', nome: 'Daiane', pago: 'não', disponivel: 0 },
         { numero: '64', nome: 'Maurício', pago: 'não', disponivel: 0 },
         { numero: '65', nome: 'Nego', pago: 'não', disponivel: 0 },
         { numero: '66', nome: 'Ruan', pago: 'não', disponivel: 0 },

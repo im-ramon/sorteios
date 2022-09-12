@@ -71,7 +71,7 @@ export default
         { numero: '69', nome: 'July', pago: 'não', disponivel: 0 },
         { numero: '70', nome: '-', pago: '75999639259', disponivel: 1 },
         { numero: '71', nome: 'Pedro', pago: 'não', disponivel: 0 },
-        { numero: '72', nome: '-', pago: '75999639261', disponivel: 1 },
+        { numero: '72', nome: 'Téo', pago: 'não', disponivel: 0 },
         { numero: '73', nome: '-', pago: '75999639262', disponivel: 1 },
         { numero: '74', nome: '-', pago: '75999639263', disponivel: 1 },
         { numero: '75', nome: '-', pago: '75999639264', disponivel: 1 },
@@ -81,7 +81,7 @@ export default
         { numero: '79', nome: '-', pago: '75999639268', disponivel: 1 },
         { numero: '80', nome: 'F Santos', pago: 'não', disponivel: 0 },
         { numero: '81', nome: 'Tanildes', pago: 'não', disponivel: 0 },
-        { numero: '82', nome: '-', pago: '75999639271', disponivel: 1 },
+        { numero: '82', nome: 'Téo', pago: 'não', disponivel: 0 },
         { numero: '83', nome: 'Músico', pago: 'não', disponivel: 0 },
         { numero: '84', nome: 'Ju', pago: 'não', disponivel: 0 }, // Tia Ju
         { numero: '85', nome: 'Ananda', pago: 'não', disponivel: 0 },

@@ -57,8 +57,8 @@ export default
         { numero: '55', nome: 'Lúcia', pago: 'não', disponivel: 0 }, //Dia 28/08/2022
         { numero: '56', nome: 'Adriana', pago: 'não', disponivel: 0 },
         { numero: '57', nome: 'Bira', pago: 'não', disponivel: 0 },
-        { numero: '58', nome: '-', pago: '75999639247', disponivel: 1 },
-        { numero: '59', nome: '-', pago: '75999639248', disponivel: 1 },
+        { numero: '58', nome: 'Ane', pago: 'não', disponivel: 0 },
+        { numero: '59', nome: 'Joselia', pago: 'não', disponivel: 0 },
         { numero: '60', nome: 'Maurício', pago: 'não', disponivel: 0 },
         { numero: '61', nome: 'Maurício', pago: 'não', disponivel: 0 },
         { numero: '62', nome: 'Catiane', pago: 'não', disponivel: 0 },
@@ -78,7 +78,7 @@ export default
         { numero: '76', nome: 'Lúcia', pago: 'não', disponivel: 0 }, // Tia
         { numero: '77', nome: 'Lúcia', pago: 'não', disponivel: 0 }, // Tia
         { numero: '78', nome: 'Pedro', pago: 'não', disponivel: 0 },
-        { numero: '79', nome: '-', pago: '75999639268', disponivel: 1 },
+        { numero: '79', nome: 'Mãe - Rosa', pago: 'não', disponivel: 0 },
         { numero: '80', nome: 'F Santos', pago: 'não', disponivel: 0 },
         { numero: '81', nome: 'Tanildes', pago: 'não', disponivel: 0 },
         { numero: '82', nome: 'Téo', pago: 'não', disponivel: 0 },

@@ -139,8 +139,8 @@ html {
 }
 
 body {
-  background: rgb(247, 98, 136);
-  background: url(../images/background-superior.png), url(../images/background-inferior.png), linear-gradient(45deg, rgb(247, 98, 136) 0%, rgb(244, 151, 175) 64%);
+  background: #4a9ae9;
+  background: url(../images/background-superior.png), url(../images/background-inferior.png), linear-gradient(45deg, #4a9ae9 0%, #98c3ed 64%);
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -170,6 +170,9 @@ header #header-imagem {
   justify-content: center;
   z-index: 9;
   position: relative;
+}
+header #header-imagem img {
+  width: 370px;
 }
 header #estrelas {
   width: 100%;
@@ -205,7 +208,7 @@ header #header-exclicacao {
   margin: 4em 0;
   font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #fff;
-  text-shadow: 0px 0px 4px rgb(247, 98, 136), 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #4a9ae9, 4px 4px 4px rgba(0, 0, 0, 0.267);
   z-index: 3;
   position: relative;
 }
@@ -224,7 +227,7 @@ header #header-premio h1 {
 }
 header #header-complemtos h2 span,
 header #header-premio h2 span {
-  color: #bd2e52;
+  color: #318ce7;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -233,7 +236,7 @@ header #header-premio h2 span {
   background: #fff;
   padding: 0.3em 1em;
   border-radius: 12px;
-  border: 2px dashed rgb(244, 151, 175);
+  border: 2px dashed #98c3ed;
 }
 header #header-exclicacao a {
   color: #fff;
@@ -243,7 +246,7 @@ header #header-exclicacao h2 {
   letter-spacing: 2px;
 }
 header #header-exclicacao h2 span {
-  color: #bd2e52;
+  color: #318ce7;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -252,7 +255,7 @@ header #header-exclicacao h2 span {
   background: #fff;
   padding: 0.3em 1em;
   border-radius: 12px;
-  border: 2px dashed rgb(244, 151, 175);
+  border: 2px dashed #98c3ed;
 }
 header .nuvem {
   position: absolute;
@@ -310,21 +313,21 @@ header .nuvem.nuvem-4 {
   height: 35px;
   background: #fff;
   border-radius: 12px;
-  border: 2px dashed rgb(244, 151, 175);
+  border: 2px dashed #98c3ed;
   box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
 }
 #explicacao #item2 div {
   width: 35px;
   height: 35px;
-  background: rgba(228, 44, 44, 0.473);
+  background: rgba(0, 32, 90, 0.473);
   border-radius: 12px;
-  border: 2px dashed rgb(244, 151, 175);
+  border: 2px dashed #98c3ed;
   box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
 }
 #explicacao span {
   padding-left: 1em;
   color: #fff;
-  text-shadow: 0px 0px 4px rgb(247, 98, 136), 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #4a9ae9, 4px 4px 4px rgba(0, 0, 0, 0.267);
 }
 
 #numeros {
@@ -341,9 +344,9 @@ header .nuvem.nuvem-4 {
   align-items: center;
   background: #fff;
   border-radius: 12px;
-  border: 2px dashed rgb(244, 151, 175);
+  border: 2px dashed #98c3ed;
   box-sizing: border-box;
-  color: #bd2e52;
+  color: #318ce7;
   cursor: pointer;
   display: flex;
   height: 80px;
@@ -364,7 +367,7 @@ header .nuvem.nuvem-4 {
   transition: all 0.3s ease-in-out;
 }
 .numero.indisponivel {
-  background: rgba(228, 44, 44, 0.473);
+  background: rgba(0, 32, 90, 0.473);
   cursor: default;
 }
 .numero.indisponivel:hover {
@@ -389,13 +392,13 @@ header .nuvem.nuvem-4 {
   z-index: 150;
   text-align: center;
   color: #fff;
-  text-shadow: 0px 0px 4px rgb(247, 98, 136), 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #4a9ae9, 4px 4px 4px rgba(0, 0, 0, 0.267);
 }
 #modal #modal-area {
   position: relative;
   width: 80%;
-  background: rgb(244, 151, 175);
-  border: 2px dashed rgb(247, 98, 136);
+  background: #98c3ed;
+  border: 2px dashed #4a9ae9;
   padding: 0.2em 1em;
   font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   border-radius: 12px;
@@ -448,11 +451,11 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: rgb(247, 98, 136);
+  background: #4a9ae9;
   border-top: 2px solid rgba(0, 0, 0, 0.11);
   padding: 4px 0;
   color: #fff;
-  text-shadow: 0px 0px 4px rgb(247, 98, 136), 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #4a9ae9, 4px 4px 4px rgba(0, 0, 0, 0.267);
 }
 footer a {
   color: #fff;

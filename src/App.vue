@@ -25,8 +25,8 @@
       </div>
 
       <div id="header-abertura">
-        <h2>Fraldas da</h2>
-        <h1>Ana Alice</h1>
+        <h2>Fraldas do</h2>
+        <h1>Elias</h1>
       </div>
 
       <div id="header-premio">

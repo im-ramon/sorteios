@@ -10,9 +10,9 @@
 }
 
 //CORES
-$cor-primaria: #4a9ae9;
-$cor-secundaria: #98c3ed;
-$cor-terciaria: #318ce7;
+$cor-primaria: #32ae7e;
+$cor-secundaria: #8edcb9;
+$cor-terciaria: #0b986a;
 
 //VARIÁVEIS DE TAMANHO
 $border-radius: 12px;
@@ -310,7 +310,7 @@ header {
         div {
             width: 35px;
             height: 35px;
-            background: rgba(0, 32, 90, 0.473);
+            background: rgba(0, 102, 42, 0.836);
             border-radius: $border-radius;
             border: 2px dashed $cor-secundaria;
             box-shadow: 3px 3px 8px 2px rgb(0 0 0 / 26%);
@@ -359,7 +359,7 @@ header {
     }
 
     &.indisponivel {
-        background: rgba(0, 32, 90, 0.473);
+        background: rgba(0, 102, 42, 0.836);
         cursor: default;
         &:hover {
             transform: none;

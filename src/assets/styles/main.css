@@ -6,13 +6,9 @@
   font-family: HugMe;
   src: url(../fonts/hug_me.otf);
 }
-@-webkit-keyframes seta1 {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1em, 0, 0);
-  }
+@font-face {
+  font-family: Nasalization;
+  src: url(../fonts/nasalization.otf);
 }
 @keyframes seta1 {
   0% {
@@ -20,14 +16,6 @@
   }
   100% {
     transform: translate3d(-1em, 0, 0);
-  }
-}
-@-webkit-keyframes seta2 {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(1em, 0, 0);
   }
 }
 @keyframes seta2 {
@@ -38,28 +26,12 @@
     transform: translate3d(1em, 0, 0);
   }
 }
-@-webkit-keyframes animaNuvens {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(15em, 0, 0);
-  }
-}
 @keyframes animaNuvens {
   0% {
     transform: translate3d(0, 0, 0);
   }
   100% {
     transform: translate3d(15em, 0, 0);
-  }
-}
-@-webkit-keyframes animaEstrela-1 {
-  0% {
-    transform: translate3d(0, -1em, 0);
-  }
-  100% {
-    transform: translate3d(0, -20em, 0);
   }
 }
 @keyframes animaEstrela-1 {
@@ -70,25 +42,9 @@
     transform: translate3d(0, -20em, 0);
   }
 }
-@-webkit-keyframes animaEstrela-2 {
-  0% {
-    transform: translate3d(0, -5em, 0);
-  }
-  100% {
-    transform: translate3d(0, -15em, 0);
-  }
-}
 @keyframes animaEstrela-2 {
   0% {
     transform: translate3d(0, -5em, 0);
-  }
-  100% {
-    transform: translate3d(0, -15em, 0);
-  }
-}
-@-webkit-keyframes animaEstrela-3 {
-  0% {
-    transform: translate3d(0, -7em, 0);
   }
   100% {
     transform: translate3d(0, -15em, 0);
@@ -102,28 +58,12 @@
     transform: translate3d(0, -15em, 0);
   }
 }
-@-webkit-keyframes animaEstrela-mobile {
-  0% {
-    transform: translate3d(0, -450px, 0);
-  }
-  100% {
-    transform: translate3d(0, -400px, 0);
-  }
-}
 @keyframes animaEstrela-mobile {
   0% {
     transform: translate3d(0, -450px, 0);
   }
   100% {
     transform: translate3d(0, -400px, 0);
-  }
-}
-@-webkit-keyframes animaEstrela-mobile2 {
-  0% {
-    transform: translate3d(0, -14em, 0);
-  }
-  100% {
-    transform: translate3d(0, -20em, 0);
   }
 }
 @keyframes animaEstrela-mobile2 {
@@ -139,8 +79,8 @@ html {
 }
 
 body {
-  background: #32ae7e;
-  background: url(../images/background-superior.png), url(../images/background-inferior.png), linear-gradient(45deg, #32ae7e 0%, #8edcb9 64%);
+  background: #185e46;
+  background: url(../images/background-superior.png), url(../images/background-inferior.png), linear-gradient(45deg, #185e46 0%, #14250b 64%);
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -206,9 +146,9 @@ header #header-complemtos,
 header #header-premio,
 header #header-exclicacao {
   margin: 4em 0;
-  font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Nasalization, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #fff;
-  text-shadow: 0px 0px 4px #32ae7e, 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #185e46, 4px 4px 4px rgba(0, 0, 0, 0.267);
   z-index: 3;
   position: relative;
 }
@@ -230,13 +170,12 @@ header #header-premio h2 span {
   color: #0b986a;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   text-shadow: none;
   background: #fff;
   padding: 0.3em 1em;
   border-radius: 12px;
-  border: 2px dashed #8edcb9;
+  border: 2px dashed #14250b;
 }
 header #header-exclicacao a {
   color: #fff;
@@ -249,13 +188,12 @@ header #header-exclicacao h2 span {
   color: #0b986a;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   text-shadow: none;
   background: #fff;
   padding: 0.3em 1em;
   border-radius: 12px;
-  border: 2px dashed #8edcb9;
+  border: 2px dashed #14250b;
 }
 header .nuvem {
   position: absolute;
@@ -294,11 +232,10 @@ header .nuvem.nuvem-4 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Nasalization, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 14px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #explicacao #item1,
@@ -313,7 +250,7 @@ header .nuvem.nuvem-4 {
   height: 35px;
   background: #fff;
   border-radius: 12px;
-  border: 2px dashed #8edcb9;
+  border: 2px dashed #14250b;
   box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
 }
 #explicacao #item2 div {
@@ -321,13 +258,13 @@ header .nuvem.nuvem-4 {
   height: 35px;
   background: rgba(0, 102, 42, 0.836);
   border-radius: 12px;
-  border: 2px dashed #8edcb9;
+  border: 2px dashed #14250b;
   box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
 }
 #explicacao span {
   padding-left: 1em;
   color: #fff;
-  text-shadow: 0px 0px 4px #32ae7e, 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #185e46, 4px 4px 4px rgba(0, 0, 0, 0.267);
 }
 
 #numeros {
@@ -337,14 +274,14 @@ header .nuvem.nuvem-4 {
   justify-content: center;
   width: 90%;
   max-width: 1366px;
-  font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Nasalization, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .numero {
   align-items: center;
   background: #fff;
   border-radius: 12px;
-  border: 2px dashed #8edcb9;
+  border: 2px dashed #14250b;
   box-sizing: border-box;
   color: #0b986a;
   cursor: pointer;
@@ -357,7 +294,6 @@ header .nuvem.nuvem-4 {
   transition: all 0.3s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   width: 80px;
   box-shadow: 3px 3px 8px 2px rgba(0, 0, 0, 0.26);
@@ -368,7 +304,7 @@ header .nuvem.nuvem-4 {
 }
 .numero.indisponivel {
   background: rgba(0, 102, 42, 0.836);
-  cursor: default;
+  cursor: not-allowed;
 }
 .numero.indisponivel:hover {
   transform: none;
@@ -392,15 +328,15 @@ header .nuvem.nuvem-4 {
   z-index: 150;
   text-align: center;
   color: #fff;
-  text-shadow: 0px 0px 4px #32ae7e, 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #185e46, 4px 4px 4px rgba(0, 0, 0, 0.267);
 }
 #modal #modal-area {
   position: relative;
   width: 80%;
-  background: #8edcb9;
-  border: 2px dashed #32ae7e;
+  background: #14250b;
+  border: 2px dashed #185e46;
   padding: 0.2em 1em;
-  font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Nasalization, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   border-radius: 12px;
 }
 #modal #modal-area .fechar {
@@ -410,7 +346,6 @@ header .nuvem.nuvem-4 {
   border: 2px solid rgba(0, 0, 0, 0.1215686275);
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   width: 36px;
@@ -451,11 +386,11 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: #32ae7e;
+  background: #185e46;
   border-top: 2px solid rgba(0, 0, 0, 0.11);
   padding: 4px 0;
   color: #fff;
-  text-shadow: 0px 0px 4px #32ae7e, 4px 4px 4px rgba(0, 0, 0, 0.267);
+  text-shadow: 0px 0px 4px #185e46, 4px 4px 4px rgba(0, 0, 0, 0.267);
 }
 footer a {
   color: #fff;
@@ -469,4 +404,25 @@ footer a {
 .seta2 {
   display: inline-block;
   animation: seta2 1s ease-out infinite alternate-reverse;
+}
+
+#header-imagem img {
+  border-radius: 15px;
+}
+
+.numero {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#nome-container {
+  position: relative;
+}
+
+#nome {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.1882352941);
+  text-align: center;
+  width: 100%;
+  display: block;
 }/*# sourceMappingURL=main.css.map */

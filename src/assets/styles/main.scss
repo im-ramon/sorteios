@@ -9,9 +9,14 @@
     src: url(../fonts/hug_me.otf);
 }
 
+@font-face {
+    font-family: Nasalization;
+    src: url(../fonts/nasalization.otf);
+}
+
 //CORES
-$cor-primaria: #32ae7e;
-$cor-secundaria: #8edcb9;
+$cor-primaria: #185e46;
+$cor-secundaria: #14250b;
 $cor-terciaria: #0b986a;
 
 //VARIÁVEIS DE TAMANHO
@@ -29,7 +34,7 @@ $border-radius: 12px;
 }
 
 @mixin font-family {
-    font-family: HugMe, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-family: Nasalization, "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 // ANIMAÇÕES
@@ -120,7 +125,10 @@ body {
     width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top left, bottom right, bottom;
+    background-position:
+        top left,
+        bottom right,
+        bottom;
 }
 
 #container {
@@ -191,7 +199,9 @@ header {
         margin: 4em 0;
         @include font-family();
         color: #fff;
-        text-shadow: 0px 0px 4px $cor-primaria, 4px 4px 4px rgba(0, 0, 0, 0.267);
+        text-shadow:
+            0px 0px 4px $cor-primaria,
+            4px 4px 4px rgba(0, 0, 0, 0.267);
         z-index: 3;
         position: relative;
     }
@@ -320,7 +330,9 @@ header {
     span {
         padding-left: 1em;
         color: #fff;
-        text-shadow: 0px 0px 4px $cor-primaria, 4px 4px 4px rgba(0, 0, 0, 0.267);
+        text-shadow:
+            0px 0px 4px $cor-primaria,
+            4px 4px 4px rgba(0, 0, 0, 0.267);
     }
 }
 
@@ -360,7 +372,7 @@ header {
 
     &.indisponivel {
         background: rgba(0, 102, 42, 0.836);
-        cursor: default;
+        cursor: not-allowed;
         &:hover {
             transform: none;
         }
@@ -385,7 +397,9 @@ header {
     z-index: 150;
     text-align: center;
     color: #fff;
-    text-shadow: 0px 0px 4px $cor-primaria, 4px 4px 4px rgba(0, 0, 0, 0.267);
+    text-shadow:
+        0px 0px 4px $cor-primaria,
+        4px 4px 4px rgba(0, 0, 0, 0.267);
 
     #modal-area {
         position: relative;
@@ -455,7 +469,9 @@ footer {
     border-top: 2px solid rgba(0, 0, 0, 0.11);
     padding: 4px 0;
     color: #fff;
-    text-shadow: 0px 0px 4px $cor-primaria, 4px 4px 4px rgba(0, 0, 0, 0.267);
+    text-shadow:
+        0px 0px 4px $cor-primaria,
+        4px 4px 4px rgba(0, 0, 0, 0.267);
 
     a {
         color: #fff;
@@ -470,4 +486,24 @@ footer {
 .seta2 {
     display: inline-block;
     animation: seta2 1s ease-out infinite alternate-reverse;
+}
+
+#header-imagem {
+    img {
+        border-radius: 15px;
+    }
+}
+.numero {
+    display: flex;
+    flex-wrap: wrap;
+}
+#nome-container {
+    position: relative;
+}
+#nome {
+    font-size: 0.7rem;
+    color: #ffffff30;
+    text-align: center;
+    width: 100%;
+    display: block;
 }

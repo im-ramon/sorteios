@@ -1,6 +1,6 @@
 export default
     [
-        { numero: '01', nome: 'Ramon Oliveira', disponivel: 0 },
+        { numero: '01', nome: 'não', disponivel: 1 },
         { numero: '02', nome: 'não', disponivel: 1 },
         { numero: '03', nome: 'não', disponivel: 1 },
         { numero: '04', nome: 'não', disponivel: 1 },
